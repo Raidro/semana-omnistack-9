@@ -9,7 +9,9 @@ const app = express();
 
 app.get('/', (req, res) => {
 
-    return res.send('Hello World');
+    return res.json({ message: 'Hello World' });
+    //quando se trabalha cm json sempre tem que passar um objeto ou array;
+    //estou enviand uma propriedade(message) com um valor(hello world);
 
 });
 //o primiero parametro é a rota, (qual rota quero executar);
