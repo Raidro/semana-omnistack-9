@@ -12,6 +12,9 @@ routes.post('/sessions', SessionController.store);
 
 routes.post('/spots', upload.single('thumbnail'), SpotController.store);
 
+routes.get('/spots', SpotController.index)
+
+
 
 //routes.post('/users', (req,  res) => {   
     //rotas sempre no plural
