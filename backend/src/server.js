@@ -6,6 +6,8 @@ const express = require('express');
 
 const mongoose = require('mongoose');
 
+const cors = require('cors');
+
 const routes = require('./routes')
 //necessario colocar o caminho relativo;
 //sem o "./" ele vai atrás de alguma dependencia
@@ -17,6 +19,9 @@ mongoose.connect('mongodb+srv://omnistack:omnistack@omnistack-hzhoe.mongodb.net/
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
+
+
+app.use(cors());
 
 app.use(express.json());
 //estou falando ao express pra utilizar formato json
