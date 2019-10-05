@@ -8,6 +8,8 @@ const mongoose = require('mongoose');
 
 const cors = require('cors');
 
+const path = require('path');
+
 const routes = require('./routes')
 //necessario colocar o caminho relativo;
 //sem o "./" ele vai atrás de alguma dependencia
@@ -25,6 +27,9 @@ app.use(cors());
 
 app.use(express.json());
 //estou falando ao express pra utilizar formato json
+
+app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads')));
+//usados para retorna arquivos staticos
 
 app.use(routes);
 //precisa vir depois do express json;
