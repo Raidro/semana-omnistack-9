@@ -86,3 +86,8 @@ body, input, button {
   cursor: pointer;
 
 }
+
+.content button.btn:hover{
+  background: #e14f50; 
+  /* muda a cor do botão quando passar o mouse por cima */
+}
